@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas: 'start river end';
+    background-color: sandybrown;
+    gap: 3vw;
+}
+.wrapper .start{
+    height: 100vh;
+    background-color: lightgreen;
+    border-right: 1px dashed brown;
+    /* background-image: linear-gradient(180deg,aqua,lightgreen); */
+    grid-area: start;
+}
+.wrapper .end{
+    height: 100vh;
+    border-left: 1px dashed brown;
+    background-color: lightgreen;
+    grid-area: end;
+}
+.wrapper .river {
+    grid-area: river;
+    height: 100vh;
+    border-right: 1px dashed brown;
+    border-left: 1px dashed brown;
+    background-color: aquamarine; 
+}
+.wrapper .river img{
+    width:30%;
+    position: relative;
+    top: 30vh;
+    animation-name: moveforward;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes moveforward {
+    from{left:0vw}
+    to{left :30vw}
+}
