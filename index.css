@@ -19,6 +19,12 @@
     border-right: 1px dashed brown;
     /* background-image: linear-gradient(180deg,aqua,lightgreen); */
     grid-area: start;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.start img{
+    width: 10vw;
 }
 .wrapper .end{
     height: 100vh;
@@ -34,7 +40,7 @@
     background-color: aquamarine; 
 }
 .wrapper .river img{
-    width:30%;
+    width:50%;
     position: relative;
     top: 30vh;
     animation-name: moveforward;
