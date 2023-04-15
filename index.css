@@ -62,11 +62,26 @@ img{
     height: 10vw;
     margin-bottom: 10vh;
 }
+ button{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    position: relative;
+    top: 30%;
+    left: 30%;
+    box-shadow: 0px 3px 3px 3px gold;
+    background-color: greenyellow;
+    border: none;
+    text-justify: center;
+    text-align: center;
+}
+button:active{
+    background-color: rgb(135, 201, 37);
+    box-shadow: 1px 1px 1px black;
+}
 .wrapper .river {
     grid-area: river;
     height: 100vh;
-    border-right: 1px dashed brown;
-    border-left: 1px dashed brown;
     align-content: end;
     justify-content: end;
  
@@ -75,10 +90,9 @@ img{
     width:20%;
     position: relative;
     top: 70vh;
-    animation-name: moveforward;
-    animation-duration: 10s;
+    left: 0;
     animation-iteration-count: infinite;
-    background-image: url('img/Goat.png');
+    /* background-image: url('img/Goat.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
