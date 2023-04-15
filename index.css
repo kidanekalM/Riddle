@@ -6,48 +6,118 @@
 }
 .wrapper{
     width: 100vw;
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-areas: 'start river end';
+    gap: 1vw;
+    /* padding-bottom: 10vh; */
     background-color: sandybrown;
-    gap: 3vw;
+    background-image: url('img/river_forest1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+img{
+    box-shadow: 0px 4px 0px rgb(253, 165, 2);
 }
 .wrapper .start{
-    height: 100vh;
-    background-color: lightgreen;
+    /* height: 100vh; */
     border-right: 1px dashed brown;
-    /* background-image: linear-gradient(180deg,aqua,lightgreen); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
     grid-area: start;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    align-items:center;
+    justify-content: start;
 }
 .start img{
     width: 10vw;
+    height: 10vw;
+    margin-bottom: 10vh;
 }
 .wrapper .end{
-    height: 100vh;
+    /* height: 100vh; */
+    border-right: 1px dashed brown;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    grid-area: start;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    align-items:center;
+    justify-content: start;
     border-left: 1px dashed brown;
-    background-color: lightgreen;
     grid-area: end;
+}
+.end img{
+    width: 10vw;
+    height: 10vw;
+    margin-bottom: 10vh;
 }
 .wrapper .river {
     grid-area: river;
     height: 100vh;
     border-right: 1px dashed brown;
     border-left: 1px dashed brown;
-    background-color: aquamarine; 
+    align-content: end;
+    justify-content: end;
+ 
 }
 .wrapper .river img{
-    width:50%;
+    width:20%;
     position: relative;
-    top: 30vh;
+    top: 70vh;
     animation-name: moveforward;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
+    background-image: url('img/Goat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100%;
 }
+
 @keyframes moveforward {
     from{left:0vw}
-    to{left :30vw}
+    to{left :50vw}
+}
+@media (max-width:768px) {
+    .wrapper{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 1.5fr 1fr;
+        grid-template-areas: 'end'
+                            ' river '
+                            'start';
+        background-color: sandybrown;
+        gap: 1vw;
+    }
+    .wrapper .start{
+        /* height: 100vh; */
+        background-color: lightgreen;
+        
+        border-right: 1px dashed brown;
+        background-image: url('img/forest.jpg');
+        grid-area: start;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    .start img{
+        width: 10vw;
+        display: inline-block;
+    }
+    .wrapper .end{
+
+    }
+     
 }
