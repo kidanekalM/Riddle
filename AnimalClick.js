@@ -57,7 +57,7 @@ function GoEmpty()
     else
     {
         // alert(boat.offsetLeft +" "+ (boat.parentElement.offsetWidth+ boat.parentElement.offsetLeft))
-        if(boat.offsetLeft == boat.parentElement.offsetWidth+boat.parentElement.offsetLeft){
+        if(boat.offsetLeft >= boat.parentElement.offsetWidth+boat.parentElement.offsetLeft){
             let clickedObj = this 
             clickedObj.style.display = "none"
             boat.style.backgroundImage=`url('${this.src}')`
@@ -72,15 +72,6 @@ function GoEmpty()
         else{
             // alert("else > else")
             let clickedObj = this 
-            clickedObj.style.display = "none"
-            boat.style.backgroundImage=`url('${this.src}')`
-            $('#boat').animate({left:`${boat.parentElement.previousElementSibling.offsetLeft}`},1000)
-            setTimeout(function(){
-                boat.style.backgroundImage="none"
-                document.getElementById('start').appendChild(clickedObj)
-                clickedObj.style.display = 'block'
-                boat.src = "img/boatForward.png"
-            },1500)
         }
     }
 }
