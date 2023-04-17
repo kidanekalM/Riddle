@@ -17,6 +17,8 @@ function GoEmpty()
             setTimeout(function(){
                 boat.style.backgroundImage="none"
                 boat.src = "img/boatBackward.png"
+                validate()
+                tripCount()
             },1500)
         }
         else{
@@ -29,6 +31,8 @@ function GoEmpty()
         setTimeout(function(){
             boat.style.backgroundImage="none"
             boat.src = "img/boatForward.png"
+            validate()
+            tripCount()
         },1500)
     }
 }
@@ -48,6 +52,8 @@ function GoEmpty()
                 document.getElementById('end').appendChild(clickedObj)
                 clickedObj.style.display = 'block'
                 boat.src = "img/boatBackward.png"
+                validate()
+                tripCount()
             },1500)
         }
         else{
@@ -67,6 +73,8 @@ function GoEmpty()
                 document.getElementById('start').appendChild(clickedObj)
                 clickedObj.style.display = 'block'
                 boat.src = "img/boatForward.png"
+                validate()
+                tripCount()
             },1500)
         }
         else{
@@ -87,4 +95,10 @@ for(let i=0;i<imgs.length;i++){
 for(let i=0;i<btnEmpty.length;i++)
 {
     btnEmpty[i].addEventListener('click',GoEmpty)
+}
+
+function tripCount(){
+    let trip = document.getElementsByClassName('trips')[0]
+    trip.innerHTML=(parseInt(trip.innerHTML)+1).toString()
+    validate()
 }

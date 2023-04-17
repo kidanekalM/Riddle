@@ -9,7 +9,6 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-areas: 'start river end';
-    gap: 1vw;
     /* padding-bottom: 10vh; */
     background-color: sandybrown;
     background-image: url('img/river_forest3.jpg');
@@ -28,17 +27,19 @@ img{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
     grid-area: start;
     display: flex;
-    align-items: end;
     flex-direction: row;
     align-items:center;
-    justify-content: start;
+    justify-content: center;
+    /* background-image: url('img/river_left.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .start img{
-    width: 10vw;
-    height: 10vw;
+    width: 9vw;
+    height: 9vw;
     margin-bottom: 10vh;
 }
 .wrapper .end{
@@ -47,7 +48,6 @@ img{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
     grid-area: start;
     display: flex;
     align-items: end;
@@ -56,6 +56,9 @@ img{
     justify-content: start;
     border-left: 1px dashed brown;
     grid-area: end;
+
+    /* background-image: url('img/river_right.jpg'); */
+
 }
 .end img{
     width: 10vw;
@@ -72,7 +75,11 @@ button:active{
     height: 100vh;
     align-content: end;
     justify-content: end;
- 
+    /* background-image: url('img/river_forest3.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 .wrapper .river img{
     width:30%;
@@ -95,20 +102,87 @@ button{
     font-size: 1.2rem;
     height: 30px;
     border-radius: 5px;
-    position: relative;
-    top: 30%;
-    left: 30%;
     box-shadow: 0px 3px 3px 3px gold;
     background-color: greenyellow;
     border: none;
-    line-height: 0px;
-    padding: 0px 15px;
-}
+    position: relative;
 
+    line-height: 0px;
+    padding: 0px 15px;    
+}
+.scoreboard{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    background-color: gainsboro;
+    border-radius: 10px;
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    
+}
+.scoreboard figure{
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 5px;
+    width: min-content;
+    height: max-content;
+    box-shadow: 1px 0px 1px 1px gray;
+}
+.scoreboard div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.scoreboard p{
+    font-size: 1rem;
+    align-self: center;
+    justify-self: center;
+}
+.scoreboard button{
+    box-shadow: none;
+    font-size: 1rem;
+    background-color: antiquewhite;
+}
+div.cover{
+height: 100vh;
+width: 100vw;
+ position: fixed;
+ background-color: rgba(0, 0, 0, 0.274);
+ /* opacity: 50%; */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+ /* display: none; */
+}
+div.message{
+    opacity: 200%;
+    width: 50%;
+    height: 50%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 4px 0px 4px 4px grey ;
+    display: flex;
+    gap: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+div.message button{
+    box-shadow: none;
+}
+h1.message{
+    font-size: 2rem;
+}
+p.details{
+    font-size: 1.5 rem;
+}
 @media (orientation:portrait) {
-    .wrapper{
-        
-    }
     .wrapper .start{
         /* height: 100vh; */
         border-right: 1px dashed brown;
@@ -122,6 +196,8 @@ button{
         flex-direction: column;
         align-items:center;
         justify-content: start;
+        background-image: linear-gradient(180deg,rgb(0, 128, 68),green);
+
     }
 
     .wrapper .end{
@@ -139,6 +215,11 @@ button{
         justify-content: start;
         border-left: 1px dashed brown;
         grid-area: end;
+        background-image: linear-gradient(180deg,rgb(0, 128, 68),green);
+
+    }
+    .river{
+        background-image: linear-gradient(180deg,aqua,aquamarine);
     }
     .start img{
         width: 20vh;
@@ -150,9 +231,19 @@ button{
         height: 20vh;
         margin-bottom: 10vh;
     }
-    button{
+    button.end{
+        position: absolute;
         padding-top: 10px;
         top: 90vh;
-        left: 10%;
+        left: 80vw;
+    }
+    button.start{
+        position: absolute;
+        padding-top: 10px;
+        top: 90vh;
+        left: 3vw;
+    }
+    .scoreboard{
+        display: none;
     }
 }

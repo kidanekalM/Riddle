@@ -9,24 +9,40 @@
 </head>
 <body>
     <div class="wrapper">
-
         <div id="start" class="start">
+            <img id="cabbage" src="img/Cabbage.png" alt="">
+            <img id="goat" src="img/Goat.png" alt="">
+            <img id="tiger" src="img/Tiger.png" alt="">
             <button class="start empty">Go</button>
-            <img src="img/Cabbage.png" alt="">
-            <img src="img/Goat.png" alt="">
-            <img src="img/Tiger.png" alt="">
         </div>
 
         <div class="river">
+            <div class="scoreboard">
+                <div class="cont"><figure class="time">0</figure><p>time</p></div>
+                <div class="cont"><figure class="trips">0</figure><p>trips</p></div>
+                <div><button class="start">start</button>
+                    <button class="stop">Stop</button></div>
+            </div>
             <img id="boat" src="img/boatforward.png" alt="">
         </div>
         <div id="end" class="end">
+            
             <button class="end empty">Back</button>
 
         </div>
+        <div class="cover">
+            <div class="message">
+                <h1 class="message">You Win or Lose!</h1>
+                <p class="details">Your time was xx seconds and you took xx trips to finish this riddle</p>
+                <button class="okay">Reset</button>
+            </div>
+        </div>
     </div>
 </body>
+
 <script src="jquery.js"></script>
+<script src="Display.js"></script>
 <script src="index.js"></script>
+<script src="Validate.js"></script>
 <script src="AnimalClick.js"></script>
 </html>

@@ -1,0 +1,4 @@
+display(message,detail)
+{
+    
+}
