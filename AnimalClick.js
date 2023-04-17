@@ -14,6 +14,7 @@ function GoEmpty() {
       $("#boat").animate({ left: `${boat.parentElement.offsetWidth}` }, 1000);
       setTimeout(function () {
         boat.style.backgroundImage = "none";
+        console.log('asdfad')
         boat.src = "img/boatBackward.png";
         validate();
         tripCount();
