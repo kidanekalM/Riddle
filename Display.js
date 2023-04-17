@@ -1,4 +1,4 @@
-display(message)
+display(message,detail)
 {
 
 }
